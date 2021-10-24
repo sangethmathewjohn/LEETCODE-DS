@@ -31,7 +31,7 @@
         
 ### Maximum Subarray
 
-### Bruteforcing(normal)
+#### Bruteforcing(normal)
 
         class Solution:
             def maxSubArray(self, nums: List[int]) -> int:
