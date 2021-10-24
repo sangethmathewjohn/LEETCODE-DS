@@ -45,3 +45,15 @@
                             maxi=sum(nums[i:j+1])
                             new=sum(nums[i:j+1])
                 return new
+        
+### Dynamic Programming
+                
+                class Solution:
+                    def maxSubArray(self, nums: List[int]) -> int:
+                        n = len(nums)
+                        maxi = maxsum = nums[0]
+                        for i in range(1, n):
+                            maxi = max(maxi + nums[i], nums[i])
+                            maxsum = max(maxi, maxsum)
+
+                        return maxsum
