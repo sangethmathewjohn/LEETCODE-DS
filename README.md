@@ -87,3 +87,15 @@
                     new.append(nums.index(i))
                     new.append(sets.index(target-i)+1)
                     return new
+
+### Merge Sorted Array
+
+#### Normal
+
+    class Solution:
+        def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+            for i in range(n):
+                nums1[m+i] =nums2[i]
+            nums1.sort()
+
+        
