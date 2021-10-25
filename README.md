@@ -75,4 +75,15 @@
                             new.append(j)
                             return(new)
 
-        
+#### Using Set
+
+    class Solution:
+        def twoSum(self, nums: List[int], target: int) -> List[int]:
+            new=[]
+            for i in nums:
+                sets =nums.copy()
+                sets.pop(sets.index(i))
+                if (target-i) in sets:
+                    new.append(nums.index(i))
+                    new.append(sets.index(target-i)+1)
+                    return new
