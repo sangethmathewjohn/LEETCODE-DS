@@ -46,7 +46,7 @@
                             new=sum(nums[i:j+1])
                 return new
         
-### Dynamic Programming
+#### Dynamic Programming
                 
                 class Solution:
                     def maxSubArray(self, nums: List[int]) -> int:
@@ -57,3 +57,22 @@
                             maxsum = max(maxi, maxsum)
 
                         return maxsum
+## DAY 2
+
+### Two Sum
+
+#### Normal 
+
+    class Solution:
+        def twoSum(self, nums: List[int], target: int) -> List[int]:
+            new=[]
+            n=len(nums)-1
+            for i in range(n):
+                for j in range(n,-1,-1):
+                    if(nums[i]+nums[j]==target):
+                        if not i==j:
+                            new.append(i)
+                            new.append(j)
+                            return(new)
+
+        
