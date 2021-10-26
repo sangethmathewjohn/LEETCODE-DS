@@ -98,4 +98,19 @@
                 nums1[m+i] =nums2[i]
             nums1.sort()
 
-        
+### Intersection-of-two-arrays-ii
+
+        class Solution:
+            def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+                if len(nums1)>len(nums2):
+                    n=nums1
+                    m=nums2
+                else:
+                    n=nums2
+                    m=nums1
+                new=[]
+                for i in range(len(m)):
+                    if m[i] in n:
+                        new.append(m[i])
+                        n.remove(m[i])
+                return new 
