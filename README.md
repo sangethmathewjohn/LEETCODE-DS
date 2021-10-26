@@ -98,6 +98,8 @@
                 nums1[m+i] =nums2[i]
             nums1.sort()
 
+## DAY 3
+
 ### Intersection-of-two-arrays-ii
 
         class Solution:
