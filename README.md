@@ -116,3 +116,16 @@
                         new.append(m[i])
                         n.remove(m[i])
                 return new 
+### Best-time-to-buy-and-sell-stock
+
+        class Solution:
+            def maxProfit(self, prices: List[int]) -> int:
+                mini=max(prices)
+                maxi=0
+                for i in range(len(prices)):
+                    if prices[i]<mini:
+                        mini=prices[i]
+                    elif(prices[i]-mini)>maxi:
+                        maxi=prices[i]-mini
+                return maxi
+
